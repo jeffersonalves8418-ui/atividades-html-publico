@@ -1,0 +1,17 @@
+# Mantém o nome do projeto Docker usado durante os testes originais.
+# Assim, a pasta pode ser renomeada sem mudar o nome do volume.
+name: atividade_php_docker
+
+services:
+  site-php:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Páginas PHP do computador disponíveis dentro do contêiner.
+      - ./site:/var/www/html:ro
+      # O arquivo nomes.txt será mantido mesmo que o contêiner pare.
+      - dados_nomes:/var/www/dados
+
+volumes:
+  dados_nomes:

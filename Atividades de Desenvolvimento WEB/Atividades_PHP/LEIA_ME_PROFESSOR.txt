@@ -1,0 +1,104 @@
+PROFESSOR — ENTREGA DAS ATIVIDADES DE PHP
+==========================================
+
+Professor,
+
+Organizei as quatro atividades de PHP em uma única pasta chamada
+"Atividades_PHP". A antiga pasta "Tela_Login" foi substituída por essa
+organização porque agora ela reúne os exercícios 1, 2 e 3 e a tela de login,
+que ficou como exercício 4.
+
+Eu fiz os testes usando o Docker Desktop no lugar do XAMPP. Escolhi essa
+alternativa porque o Docker consegue executar o PHP com o servidor Apache
+dentro de um contêiner. O código continua sendo PHP normal, e deixei o
+projeto preparado para ser executado também pelo XAMPP.
+
+O QUE EU FIZ EM CADA EXERCÍCIO
+
+1. Nome completo: fiz um formulário que recebe nome e sobrenome. O PHP junta
+   os dois e mostra o nome completo em uma caixa de texto.
+
+2. Salvar nomes: fiz um formulário que recebe nome e sobrenome e acrescenta
+   cada registro ao arquivo "nomes.txt" do servidor, sem apagar os anteriores.
+   Também deixei a lista de nomes gravados visível na própria página.
+
+3. Tabuada: o PHP recebe um número e calcula a tabuada de 1 a 10 utilizando
+   um laço "for". Para conferir, pode digitar 5 e verificar se aparecem,
+   entre outros resultados, 5 x 1 = 5, 5 x 5 = 25 e 5 x 10 = 50.
+
+4. Tela de login: utilizei os dados pedidos no enunciado: usuário "João"
+   (com acento) e senha "1234". Se os dois estiverem corretos, aparece
+   "Você está logado". Se algum estiver incorreto, aparece
+   "Usuário ou senha errados".
+
+IMPORTANTE SOBRE O ARMAZENAMENTO
+
+No enunciado, quem grava nome e sobrenome é o EXERCÍCIO 2, e não o 3.
+Os registros são salvos em um ARQUIVO DE TEXTO chamado "nomes.txt".
+Não utilizei banco de dados SQL (como MySQL ou SQLite), porque o exercício
+pede a gravação em um arquivo TXT no servidor.
+
+COMO O PROFESSOR PODE CONFERIR NO DOCKER DESKTOP
+
+1. Instalar e abrir o Docker Desktop.
+2. Abrir um terminal na pasta "Atividades_PHP", onde está "compose.yaml".
+3. Executar: docker compose up --build -d
+4. Acessar: http://localhost:8080
+5. No menu esquerdo, abrir cada atividade e testar os formulários.
+6. No exercício 2, enviar um nome e sobrenome de teste (por exemplo,
+   "Maria Silva"). A página deverá confirmar o salvamento e listar o nome.
+7. Para confirmar a gravação dentro do Docker, executar no terminal aberto
+   na pasta do projeto:
+
+   docker compose exec site-php cat /var/www/dados/nomes.txt
+
+   O terminal exibirá os registros gravados, um por linha.
+
+8. Também é possível abrir o Docker Desktop, entrar em "Containers",
+   selecionar o contêiner "site-php", ir até a aba "Files" e localizar
+   "var > www > dados > nomes.txt". Caso o Docker não abra o conteúdo ao
+   clicar no arquivo, o comando do item 7 permite visualizá-lo.
+
+9. Para conferir o exercício 3, abrir a opção "Tabuada" e informar o número 5.
+   Para conferir o exercício 4, testar "João" / "1234" e depois uma senha
+   diferente.
+
+Observação: os nomes gravados no Docker ficam em um VOLUME do Docker,
+por isso não aparecem automaticamente na pasta "dados" do Windows.
+
+COMO O PROFESSOR PODE CONFERIR NO XAMPP
+
+1. Instalar e abrir o XAMPP, iniciando o serviço "Apache".
+2. Copiar a pasta "Atividades_PHP" completa para:
+
+   C:\xampp\htdocs\Atividades_PHP
+
+3. Abrir no navegador:
+
+   http://localhost/Atividades_PHP/site/
+
+   Caso o Apache esteja configurado em outra porta, ajustar a URL.
+
+4. Testar os quatro exercícios pelo menu esquerdo. Para o exercício 2,
+   preencher nome e sobrenome e clicar em "Salvar nome".
+5. Para conferir o armazenamento no XAMPP, abrir no Explorador do Windows
+   o arquivo:
+
+   C:\xampp\htdocs\Atividades_PHP\dados\nomes.txt
+
+   Depois de salvar o primeiro registro, o arquivo aparece nessa pasta.
+   Ele pode ser aberto com o Bloco de Notas. A página do exercício 2
+   também mostra a lista de nomes gravados.
+6. Para conferir a tabuada, usar o número 5; para testar o login,
+   utilizar "João" e "1234".
+
+O ARQUIVO NO DOCKER E NO XAMPP
+
+Os dois ambientes executam o mesmo código, mas guardam os registros em
+locais diferentes. Para conferir nomes no Docker, deve-se consultar o
+volume do contêiner. Para conferir no XAMPP, deve-se abrir a pasta
+"dados" dentro da pasta "Atividades_PHP" no Windows. Não é necessário
+ter MySQL ligado para executar estas atividades.
+
+A pasta também inclui um README com instruções e todos os arquivos PHP,
+CSS e de configuração do Docker, para facilitar a correção.

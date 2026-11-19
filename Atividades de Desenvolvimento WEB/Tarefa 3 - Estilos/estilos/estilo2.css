@@ -1,0 +1,196 @@
+:root {
+    --list-marker: circle;
+    --document-margin: 12px auto;
+    --table-border-width: 2px;
+    --body-font: Georgia, serif;
+    --page: #f5efe7;
+    --surface: #fffdfa;
+    --panel: #f8efe4;
+    --text: #3d2b2a;
+    --heading: #633345;
+    --accent: #824c35;
+    --border: #e4cfc2;
+    --card-background: #4d2d3b;
+    --card-text: #fff4e9;
+    --card-highlight: #ffd4b7;
+    --photo-filter: hue-rotate(125deg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1120px;
+    margin: var(--document-margin);
+    padding: 24px;
+    background: var(--page);
+    color: var(--text);
+    font-family: var(--body-font);
+    line-height: 1.55;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.65rem);
+    line-height: 1.12;
+}
+
+h2 {
+    color: var(--heading);
+    font-size: 1.22rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.navegacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.navegacao a {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegacao a:hover {
+    text-decoration: underline;
+}
+
+.area-cartao {
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 14px;
+}
+
+.cartao-visita {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 4vw, 32px);
+    overflow-wrap: anywhere;
+}
+
+.foto-cartao {
+    flex: none;
+    border-radius: 12px;
+    filter: var(--photo-filter);
+}
+
+.cargo {
+    margin: 6px 0 8px;
+    font-weight: bold;
+}
+
+address, .redes {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    row-gap: 4px;
+    margin-top: 12px;
+    font-style: normal;
+}
+
+.curriculo {
+    display: grid;
+    grid-template-columns: minmax(215px, 0.85fr) minmax(0, 2fr);
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+.lateral, .conteudo {
+    padding: clamp(18px, 3vw, 32px);
+}
+
+.lateral {
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.secao + .secao, .secao-lateral + .secao-lateral {
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.secao > h2, .secao-lateral > h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 1.15rem;
+}
+
+.curriculo ul:not(.lista-contato) {
+    list-style-type: var(--list-marker);
+}
+
+li + li {
+    margin-top: 4px;
+}
+
+li::marker, .destaque {
+    color: var(--accent);
+}
+
+.lista-experiencia {
+    margin-top: 8px;
+}
+
+.lista-contato {
+    list-style: none;
+    padding-left: 0;
+}
+
+.secao-lateral p + p:has(strong) {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-wrap: anywhere;
+}
+
+th, td {
+    border: var(--table-border-width) solid var(--border);
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: var(--panel);
+    color: var(--heading);
+}
+
+@media (max-width: 680px) {
+    body { padding: 12px; }
+    .cartao-visita { align-items: flex-start; flex-direction: column; }
+    .curriculo { grid-template-columns: minmax(0, 1fr); }
+    .lateral { border-right: 0; border-bottom: 1px solid var(--border); }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5 - Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Calculadora</h1>
+        <p>Digite dois números e clique na operação desejada. Na subtração e na divisão, o primeiro número vem antes do segundo.</p>
+        <p>Use ponto nos números decimais. Exemplo: 2.5.</p>
+        <form onsubmit="return false;">
+            <label for="numero1">Primeiro número:</label>
+            <input class="campo" type="text" id="numero1"><br><br>
+            <label for="numero2">Segundo número:</label>
+            <input class="campo" type="text" id="numero2"><br><br>
+            <button type="button" onclick="somar()">Somar +</button>
+            <button type="button" onclick="subtrair()">Subtrair −</button>
+            <button type="button" onclick="multiplicar()">Multiplicar ×</button>
+            <button type="button" onclick="dividir()">Dividir ÷</button>
+            <h2>Resultado</h2>
+            <p id="resultado">Aguardando uma operação.</p>
+        </form>
+    </main>
+</body>
+</html>

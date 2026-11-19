@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 - Bhaskara</title>
+    <link rel="stylesheet" href="bhaskara.css">
+    <script src="bhaskara.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Bhaskara</h1>
+        <h2>Raízes de uma equação do segundo grau</h2>
+        <p>Digite os valores de a, b e c da equação ax<sup>2</sup> + bx + c = 0. O valor de a deve ser diferente de zero.</p>
+        <p>Delta = b² − 4ac. As raízes são calculadas por x = (−b ± √delta) / (2a).</p>
+        <p>Use ponto nos números decimais. Exemplo: 2.5.</p>
+        <form onsubmit="return false;">
+            <label for="a">a:</label>
+            <input class="campo" type="text" id="a"><br><br>
+            <label for="b">b:</label>
+            <input class="campo" type="text" id="b"><br><br>
+            <label for="c">c:</label>
+            <input class="campo" type="text" id="c"><br><br>
+            <button type="button" onclick="bhaskara()">Calcular</button>
+            <h2>Resposta</h2>
+            <div>
+                <p id="saida0"></p>
+                <p id="saida1"></p>
+                <p id="saida2"></p>
+                <p id="saida3"></p>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

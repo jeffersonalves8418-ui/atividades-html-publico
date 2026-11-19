@@ -1,0 +1,76 @@
+body {
+    background-color: #eeeeee;
+    font-family: Arial;
+    color: #222222;
+    margin: 20px;
+}
+h1 { color: #174b70; }
+h2 { font-size: 22px; }
+p { line-height: 1.5; }
+a { color: #174b70; }
+
+.curriculo { background-color: white; padding: 20px; border: 1px solid gray; }
+.foto { width: 120px; height: 120px; }
+.cabecalho { border-bottom: 2px solid #174b70; padding: 10px; }
+.secao { margin-top: 20px; }
+h2 { color: #174b70; }
+.lista-habilidades { list-style-type: square; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid gray; padding: 8px; text-align: left; }
+th { background-color: lightblue; }
+.rodape { text-align: center; }
+
+.curriculo {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.subtitulo {
+    font-size: 18px;
+}
+
+.lista-em-colunas {
+    columns: 2;
+    column-gap: 40px;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.lista-em-colunas li {
+    break-inside: avoid;
+}
+
+.lista-contato a {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+    body { margin: 10px; }
+    .curriculo { padding: 12px; }
+    .cabecalho { flex-wrap: wrap; }
+    .lista-em-colunas { columns: 1; }
+    th, td { padding: 4px; }
+}
+
+.subtitulo {
+    margin-bottom: 4px;
+    color: #174b70;
+    font-weight: bold;
+}
+
+.profissao {
+    margin-top: 0;
+}
+
+.lista-projetos li {
+    margin-bottom: 8px;
+}

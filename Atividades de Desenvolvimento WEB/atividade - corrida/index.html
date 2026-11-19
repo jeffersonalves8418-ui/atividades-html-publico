@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4 - Inscrição na corrida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Inscrição na corrida</h1>
+        <p>Preencha seus dados e escolha a distância e os itens desejados.</p>
+        <form onsubmit="return false;">
+            <label for="nome">Nome:</label>
+            <input class="campo" type="text" id="nome" name="nome"><br><br>
+            <label for="sobrenome">Sobrenome:</label>
+            <input class="campo" type="text" id="sobrenome" name="sobrenome"><br><br>
+            <label for="idade">Idade:</label>
+            <input class="campo" type="number" id="idade" name="idade" min="1"><br><br>
+            <label for="cpf">CPF:</label>
+            <input class="campo" type="text" id="cpf" name="cpf"><br><br>
+            <label for="telefone">Telefone:</label>
+            <input class="campo" type="tel" id="telefone" name="telefone"><br><br>
+            <label for="email">E-mail:</label>
+            <input class="campo" type="email" id="email" name="email"><br><br>
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="">Selecione</option>
+                <option>Feminino</option>
+                <option>Masculino</option>
+                <option>Outro</option>
+                <option>Prefiro não informar</option>
+            </select><br><br>
+            <fieldset>
+                <legend>Distância da corrida</legend>
+                <label><input type="radio" name="distancia" value="5"> 5 km</label>
+                <label><input type="radio" name="distancia" value="10"> 10 km</label>
+                <label><input type="radio" name="distancia" value="15"> 15 km</label>
+            </fieldset>
+            <fieldset>
+                <legend>Itens desejados</legend>
+                <label><input type="checkbox" name="camiseta"> Camiseta</label>
+                <label><input type="checkbox" name="medalha"> Medalha</label>
+                <label><input type="checkbox" name="banana"> Banana</label>
+            </fieldset>
+            <button type="submit">Enviar inscrição</button>
+        </form>
+    </main>
+</body>
+</html>

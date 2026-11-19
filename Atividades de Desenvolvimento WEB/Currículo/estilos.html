@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 3 - Estilos do currículo</title>
+    <!-- Para testar o Estilo 2, troque o href por estilos/estilo2.css. -->
+    <link rel="stylesheet" href="estilos/estilo1.css">
+    <!-- CSS interno do cartão de visita. -->
+    <style>
+        .area-cartao {
+            background-color: var(--card-background);
+            color: var(--card-text);
+            font-family: Arial, sans-serif;
+        }
+
+        .cartao-visita h1,
+        .cartao-visita a {
+            color: var(--card-highlight);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navegacao" aria-label="Navegação do currículo">
+        <a href="index.html">Currículo inicial</a>
+    </nav>
+    <section class="area-cartao" aria-label="Cartão de visita">
+        <div class="cartao-visita">
+            <!-- CSS inline para demonstrar o tamanho da imagem diretamente na tag. -->
+            <img src="perfil.svg" alt="Iniciais de Jefferson Alves" class="foto-cartao"
+                 style="width: 112px; height: 112px;">
+            <div>
+                <h1>Jefferson Alves</h1>
+                <p class="cargo" style="color: var(--card-highlight);">Auxiliar Técnico de Fibra Óptica</p>
+                <p>Atividade: Instalação e suporte de fibra óptica.</p>
+                <address>
+                    <span>Jardim Santa Terezinha - São Paulo/SP</span>
+                    <a href="tel:+5511930430038">(11) 93043-0038</a>
+                    <a href="mailto:jefferson.alves8418@gmail.com">jefferson.alves8418@gmail.com</a>
+                </address>
+                <div class="redes" aria-label="Redes sociais">
+                    <a href="https://www.instagram.com/">Instagram</a>
+                    <a href="https://www.linkedin.com/">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="curriculo">
+        <aside class="lateral">
+            <section class="secao-lateral">
+                <h2>Contato</h2>
+                <ul class="lista-contato">
+                    <li>(11) 93043-0038</li>
+                    <li>jefferson.alves8418@gmail.com</li>
+                    <li>Jardim Santa Terezinha<br>São Paulo/SP</li>
+                </ul>
+            </section>
+            <section class="secao-lateral">
+                <h2>Informações pessoais</h2>
+                <ul>
+                    <li>Idade: 21 anos</li>
+                    <li>CNH: Categoria B</li>
+                </ul>
+            </section>
+            <section class="secao-lateral">
+                <h2>Habilidades</h2>
+                <ul class="lista-habilidades">
+                    <li>Comunicação clara e objetiva</li>
+                    <li>Trabalho em equipe</li>
+                    <li>Proatividade</li>
+                    <li>Organização e atenção</li>
+                    <li>Resolução de problemas</li>
+                </ul>
+            </section>
+            <section class="secao-lateral">
+                <h2>Formação</h2>
+                <p><strong>Análise e Desenvolvimento de Sistemas</strong></p>
+                <p class="destaque">Cursando</p>
+                <p>Estácio - Interlagos/SP</p>
+                <p><strong>Ensino Médio</strong></p>
+                <p class="destaque">Completo</p>
+            </section>
+        </aside>
+        <div class="conteudo">
+            <section class="secao">
+                <h2>Perfil Profissional</h2>
+                <p>
+                    Profissional com experiência na área de atendimento e telecomunicações,
+                    com facilidade para aprender, trabalhar em equipe e buscar soluções eficientes.
+                </p>
+            </section>
+            <section class="secao">
+                <h2>Experiência Profissional</h2>
+                <h3>Bossparking Estacionamento Ltda.</h3>
+                <p><strong>Operador de Caixa de Estacionamento</strong></p>
+                <p class="destaque">Maio/2024 - 10/08/2026</p>
+                <ul class="lista-experiencia">
+                    <li>Atendimento ao público com comunicação clara e cordial.</li>
+                    <li>Operação de caixa e conferência de valores.</li>
+                    <li>Trabalho em equipe e apoio às rotinas do estacionamento.</li>
+                    <li>Identificação e resolução de ocorrências do dia a dia.</li>
+                </ul>
+            </section>
+            <section class="secao">
+                <h2>Conhecimentos e Habilidades Técnicas</h2>
+                <ul class="lista-tecnica">
+                    <li>Instalações eletrônicas</li>
+                    <li>Microinformática</li>
+                    <li>Arduino ATmega328</li>
+                    <li>Excel, Word e PowerPoint</li>
+                    <li>Wi-Fi e Bluetooth</li>
+                    <li>Redes de fibra óptica</li>
+                </ul>
+            </section>
+            <section class="secao">
+                <h2>Cursos e Capacitações</h2>
+                <ul class="lista-cursos">
+                    <li>Técnicas Administrativas - Microlins (2021)</li>
+                    <li>Pacote Office - Microlins (2021)</li>
+                    <li>Segurança no Trabalho - 14h</li>
+                    <li>WEB 3.0 - 20h</li>
+                </ul>
+            </section>
+            <section class="secao">
+                <h2>Formação Acadêmica</h2>
+                <table class="tabela-formacao">
+                    <thead>
+                        <tr>
+                            <th scope="col">Curso</th>
+                            <th scope="col">Instituição</th>
+                            <th scope="col">Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Análise e Desenvolvimento de Sistemas</td>
+                            <td>Estácio</td>
+                            <td>Cursando</td>
+                        </tr>
+                        <tr>
+                            <td>Ensino Médio</td>
+                            <td>Escola Estadual</td>
+                            <td>Completo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="secao objetivo">
+                <h2>Objetivo Profissional</h2>
+                <p>
+                    Atuar como Auxiliar Técnico de Fibra Óptica, contribuindo com dedicação,
+                    vontade de aprender e compromisso com soluções de qualidade.
+                </p>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
